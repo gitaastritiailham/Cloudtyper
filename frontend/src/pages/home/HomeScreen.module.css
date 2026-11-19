@@ -1,0 +1,139 @@
+.terminal {
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--term-body);
+  backdrop-filter: blur(12px);
+  color: var(--term-text);
+  font-family: var(--font-mono);
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px;
+  background: var(--term-title);
+  font-size: 17px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dots i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.body {
+  min-height: 563px;
+  padding: 8px 32px 24px;
+}
+
+.entry {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(143, 168, 201, 0.24);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.prompt {
+  color: var(--term-prompt);
+}
+
+.cmd {
+  color: var(--term-command);
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 8px;
+  font-family: var(--font-rounded);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.welcome img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.sub {
+  margin: 0;
+  color: var(--term-muted);
+  font-family: var(--font-rounded);
+  font-size: 16px;
+  text-align: center;
+}
+
+.text {
+  margin: 12px 0 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+}
+
+.command {
+  margin: 4px 0 0;
+  color: var(--term-command);
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--term-command);
+  caret-color: #fff;
+  caret-shape: block;
+  font: inherit;
+}
+
+.inputEmpty {
+  caret-color: transparent;
+}
+
+.input::placeholder {
+  color: var(--term-muted);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.cursor {
+  display: inline-block;
+  flex: 0 0 0.4em;
+  height: 1.1em;
+  background: #fff;
+  animation: cursor-blink 1s steps(2, start) infinite;
+}
+
+@keyframes cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.error {
+  margin: 4px 0 0;
+  color: var(--term-error);
+  font-size: 14px;
+}

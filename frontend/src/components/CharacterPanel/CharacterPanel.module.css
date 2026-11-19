@@ -1,0 +1,38 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.placeholder,
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1.9;
+  border-radius: 16px;
+}
+
+@media (min-width: 901px) {
+  .placeholder,
+  .image {
+    flex: 1;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--brand);
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--brand);
+  font-size: 14px;
+}
+
+.image {
+  object-fit: cover;
+}

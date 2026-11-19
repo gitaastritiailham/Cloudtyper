@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=JetBrains+Mono:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  /* halaman & jendela */
+  --bg-page-top: #b9dcfa;
+  --bg-page-bottom: #e6f3ff;
+  --bg-window: rgba(255, 255, 255, 0.6);
+  --border-window: #bcd8f3;
+  --brand: #3d85d8;
+  --accent: #1aabee; /* tombol utama */
+  --text: #17325c;
+  --text-muted: #6f8fb8;
+  --blob: rgba(255, 255, 255, 0.9);
+  --glow-a: rgba(90, 170, 255, 0.5);
+  --glow-b: rgba(255, 255, 255, 0.9);
+  --window-glow: rgba(61, 133, 216, 0.28);
+
+  /* kartu */
+  --surface: #ffffff;
+  --surface-soft: #f1f8ff;
+  --card-border: #dbe9f8;
+  --icon-box: #e4f0fd;
+
+  /* terminal */
+  --term-title: #102a4c;
+  --term-body: #0c2140;
+  --term-panel: #14395f;
+  --term-text: #e8f0fc;
+  --term-muted: #8fa8c9;
+  --term-prompt: #86e0a5;
+  --term-command: #b57cf0;
+  --term-line: color-mix(in srgb, var(--brand) 45%, transparent);
+  --term-accent: #a9d0ff;
+  --term-error: #ff8f8f;
+
+  --font-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  --font-rounded: "M PLUS Rounded 1c", var(--font-sans);
+  --font-mono: "JetBrains Mono", "Noto Sans Mono", Consolas, monospace;
+}
+
+/* tema gelap */
+[data-theme='dark'] {
+  --bg-page-top: #08162b;
+  --bg-page-bottom: #0d2140;
+  --bg-window: rgba(18, 41, 74, 0.8);
+  --border-window: #2a4a75;
+  --brand: #7fb3f0;
+  --text: #e3eefc;
+  --text-muted: #8fa8c9;
+  --surface: #14305a;
+  --surface-soft: #1a3a68;
+  --card-border: #2a4a75;
+  --icon-box: #1d3a63;
+  --blob: rgba(255, 255, 255, 0.03);
+  --glow-a: transparent;
+  --glow-b: transparent;
+  --window-glow: transparent;
+}
+
+/* tema biru */
+[data-theme='blue'] {
+  --bg-page-top: #4da6ff;
+  --bg-page-bottom: #7cc0ff;
+  --bg-window: rgba(255, 255, 255, 0.35);
+  --border-window: #ffffff;
+  --brand: #0f4c9a;
+  --text: #0b2f63;
+  --text-muted: #2c5c9a;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-soft: rgba(255, 255, 255, 0.6);
+  --card-border: #ffffff;
+  --icon-box: #d3e8ff;
+  --blob: rgba(255, 255, 255, 0.5);
+  --glow-a: rgba(255, 255, 255, 0.45);
+  --glow-b: rgba(120, 200, 255, 0.6);
+  --window-glow: rgba(255, 255, 255, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 10%, var(--glow-a), transparent 70%),
+    radial-gradient(ellipse 55% 50% at 90% 90%, var(--glow-b), transparent 70%),
+    linear-gradient(180deg, var(--bg-page-top), var(--bg-page-bottom));
+  background-attachment: fixed;
+}
+
+/* ブルーだけ画像を使う */
+[data-theme='blue'] body {
+  background:
+    url('../assets/bg-sky.jpg') center / cover no-repeat fixed,
+    linear-gradient(180deg, var(--bg-page-top), var(--bg-page-bottom));
+}
+button {
+  font-family: inherit;
+}

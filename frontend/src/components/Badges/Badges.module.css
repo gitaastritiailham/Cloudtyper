@@ -1,0 +1,76 @@
+.level {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.beginner {
+  background: #d6f2e0;
+  color: #1f9d55;
+}
+
+.intermediate {
+  background: #dcebfb;
+  color: #2e7fd1;
+}
+
+.advanced {
+  background: #eadcfb;
+  color: #7a4bd0;
+}
+
+.grade {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 110px;
+  border: 4px solid;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.gradeSm {
+  width: 84px;
+  height: 84px;
+  border-width: 3px;
+  border-radius: 16px;
+}
+
+.gradeLabel {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.gradeLetter {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.gradeSm .gradeLetter {
+  font-size: 44px;
+}
+
+.gradeS {
+  border-color: #f5a30a;
+  color: #f5a30a;
+}
+
+.gradeA {
+  border-color: #2e9be6;
+  color: #2e9be6;
+}
+
+.gradeB {
+  border-color: #27ae60;
+  color: #27ae60;
+}
+
+.gradeC {
+  border-color: #8a97a8;
+  color: #8a97a8;
+}

@@ -1,0 +1,42 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.window {
+  width: 100%;
+  max-width: 1500px;
+  overflow: hidden;
+  border: 1px solid var(--border-window);
+  border-radius: 28px;
+  background: var(--bg-window);
+  box-shadow: 0 0 70px var(--window-glow), 0 12px 48px rgba(40, 90, 160, 0.2);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  min-height: 679px;
+  padding: 28px 36px 36px;
+}
+
+.withCharacter {
+  grid-template-columns: minmax(0, 1fr) 300px;
+}
+
+.main {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .body,
+  .withCharacter {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 20px;
+    min-height: 655px;
+  }
+}

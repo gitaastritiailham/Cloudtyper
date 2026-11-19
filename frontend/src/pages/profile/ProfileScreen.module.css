@@ -1,0 +1,157 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile,
+.panel {
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background: var(--surface-soft);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 36px;
+}
+
+.avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--icon-box);
+  color: var(--brand);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  margin: 0 0 6px;
+  color: var(--brand);
+  font-size: 36px;
+}
+
+.bio {
+  margin: 0;
+  color: var(--text);
+}
+
+.logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--brand);
+  border-radius: 10px;
+  background: none;
+  color: var(--brand);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: var(--icon-box);
+}
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  padding: 0 36px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.tab {
+  padding: 22px 12px 14px;
+  border: none;
+  border-bottom: 4px solid transparent;
+  background: none;
+  color: var(--brand);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tabActive {
+  border-bottom-color: #7fcdf5;
+  font-weight: 700;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 36px;
+  padding: 20px 36px 28px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--card-border);
+  color: var(--brand);
+  font-size: 15px;
+  text-align: center;
+}
+
+.table th {
+  padding: 18px 8px;
+  background: var(--icon-box);
+  font-weight: 500;
+}
+
+.table td {
+  height: 56px;
+  padding: 8px;
+  border-top: 1px solid var(--card-border);
+  background: var(--surface);
+}
+
+.empty,
+.soon {
+  color: var(--text-muted);
+}
+
+.soon {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.side {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .profile {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .tabs {
+    gap: 8px;
+    padding: 0 12px;
+    overflow-x: auto;
+  }
+
+  .tab {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .content {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px;
+  }
+
+  .main {
+    overflow-x: auto;
+  }
+}
